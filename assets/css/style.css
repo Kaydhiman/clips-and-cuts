@@ -328,12 +328,16 @@ FAQs
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
-    transition: .3s ease-in-out;
+    transition: .3s all ease-in-out;
 }
 
 .faqs-section .faq-section__accordion.active .faq-section__accordion-icon {
     transform: rotate(90deg);
     background-color: var(--primary-color);
+}
+
+.faqs-section .faq-section__accordion.active .faq-section__accordion-icon svg path {
+    fill: #fff;
 }
 
 .faqs-section .faq-section__accordion-ans {
