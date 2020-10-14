@@ -1,0 +1,27 @@
+$(document).ready(function () {
+  // SHRICK HEADER ON IF WINDOW SCROLL GREATER THEN 100
+  function shrinckHeader() {
+    scroll = $(window).scrollTop();
+    if (scroll >= 100) {
+      $(".header").addClass("header--shrink");
+    } else {
+      $(".header").removeClass("header--shrink");
+    }
+  }
+
+  shrinckHeader();
+  $(window).scroll(shrinckHeader);
+
+  // FEATURE TABS
+  $(".features-section__tab").click(function () {
+    $(".features-section__tab").removeClass("active");
+    $(this).addClass("active");
+    $(".features-section__tabs-content").removeClass("active");
+    $(".features-section__tabs-content." + $(this).attr('id')).addClass("active");
+  });
+
+  // FAQ ACCORDION
+  $(".faq-section__accordion-icon").click(function () {
+    $(this).parents(".faq-section__accordion").toggleClass("active");
+  });
+});
