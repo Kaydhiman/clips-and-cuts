@@ -188,6 +188,12 @@ BANNER
     max-width: 705px;
 }
 
+.banner__btn img {
+    width: 200px;
+    height: 60px;
+}
+
+
 
 /* =========================
 STYLIST SECTION
@@ -210,6 +216,7 @@ STYLIST SECTION
 .stylist-section .stylist-section__card-heading {
     font-family: var(--small-headings-font);
     margin-bottom: 14px;
+    color: #2a2a2a;
 }
 
 .stylist-section .stylist-section__card-description  {
