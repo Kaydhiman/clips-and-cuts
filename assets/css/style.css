@@ -577,6 +577,8 @@ TAB
     .contact-us-section .contact-us-section__btn-arrow {
         width: 32px;
         height: 32px;
+        margin-left: 20px;
+        margin-right: -28px;
     }
 
 
