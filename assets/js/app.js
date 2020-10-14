@@ -24,4 +24,29 @@ $(document).ready(function () {
   $(".faq-section__accordion-icon").click(function () {
     $(this).parents(".faq-section__accordion").toggleClass("active");
   });
+
+
+  // FEATURES SLIDER ON MOBILE
+  function featuresSlider() {
+    if ($(window).width() <= 991) {
+      $(".carousel-on-mobile").addClass("owl-carousel");
+      $(".carousel-on-mobile").addClass("owl-theme");
+  
+      var $owlEfficacy = $(".carousel-on-mobile.owl-carousel");
+  
+      $owlEfficacy.owlCarousel({
+        loop: false,
+        items: 1,
+        dots: true,
+        nav: false
+      });
+    } else {
+      $(".carousel-on-mobile").trigger("destroy.owl.carousel");
+      $(".carousel-on-mobile").removeClass("owl-carousel");
+      $(".carousel-on-mobile").removeClass("owl-theme");
+    }
+  }
+
+  featuresSlider();
+  $(window).resize(featuresSlider);
 });

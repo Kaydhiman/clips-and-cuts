@@ -98,7 +98,6 @@ HEADER
 }
 
 .header .nav-link {
-    font-size: 20px;
     padding: 0 30px !important;
     color: #fff;
 }
@@ -134,6 +133,24 @@ HEADER
     padding: 8px 0;
 }
 
+.header .navbar-toggler {
+    padding: 0;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.header .navbar-toggler svg {
+    width: 40px;
+}
+
+.header .navbar-toggler svg path {
+    fill: #fff;
+}
+
+.header.header--shrink .navbar-toggler svg path {
+    fill: #000;
+}
 
 
 /* =========================
@@ -167,7 +184,6 @@ BANNER
 }
 
 .banner .banner__content .banner__decription {
-    font-size: 20px;
     margin-bottom: 30px;
     max-width: 705px;
 }
@@ -192,7 +208,6 @@ STYLIST SECTION
 }
 
 .stylist-section .stylist-section__card-heading {
-    font-size: 20px;
     font-family: var(--small-headings-font);
     margin-bottom: 14px;
 }
@@ -212,10 +227,6 @@ FEATURES
     background-size: cover;
     background-position: center;
 }
-
-/* .features-section .container {
-    max-width: 960px !important;
-} */
 
 .features-section .features-section__heading {
     color: #fff;
@@ -279,7 +290,25 @@ FEATURES
 }
 
 .features-section .features-section__phone-top-text {
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: .29px;
     margin-bottom: 29px;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    background: var(--gray-color);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--primary-color);
 }
 
 
@@ -317,10 +346,15 @@ FAQs
     font-size: 20px;
 }
 
+.faqs-section .faq-section__accordion-qst p {
+    flex: 1;
+}
+
 .faqs-section .faq-section__accordion-icon {
     display: inline-flex;
     width: 32px;
     height: 32px;
+    margin-left: 10px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -448,5 +482,136 @@ LARGE DESKTOP
 @media only screen and (min-width: 1660px) {
     body {
         font-size: 20px;
+    }
+}
+
+
+/* =========================
+Meduim DESKTOP
+=============================*/
+@media only screen and (max-width: 1599px) {
+    body {
+        font-size: 18px;
+    }
+
+    .banner {
+        padding: 230px 0;
+    }
+
+    .banner .banner__content .banner__heading {
+        font-size: 57px;
+    }
+
+    .banner .banner__content .banner__sub-heading {
+        font-size: 42px;
+    }
+
+    .section-heading {
+        font-size: 50px;
+    }
+}
+
+
+/* =========================
+TAB
+=============================*/
+@media only screen and (max-width: 991px) {
+    body {
+        font-size: 16px;
+    }
+
+    main section {
+        padding: 50px 0;
+    }
+
+    .navbar-brand img,
+    .footer__logo {
+        max-width: 70px;
+    }
+
+    .header nav.navbar {
+        padding: 8px 0;
+    }
+
+    .navbar-nav {
+        margin-top: 20px;
+        background: #fff;
+    }
+
+    .header .nav-link {
+        display: inline-block;
+        padding: 5px 15px !important;
+        color: #000;
+    }
+
+    .banner .banner__content .banner__heading {
+        font-size: 46px;
+    }
+
+    .banner .banner__content .banner__sub-heading {
+        font-size: 30px;
+    }
+
+    .section-heading {
+        font-size: 36px;
+    }
+
+    .contact-us-section .form-control {
+        height: 50px;
+    }
+
+    .contact-us-section .contact-us-section__btn-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .features-section .features-section__tab {
+        font-size: 22px;
+        padding: 0 20px;
+    }
+
+    .features-section .features-section__tab span {
+        padding-bottom: 10px;
+    }
+
+    .features-section__phone-container {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .carousel-on-mobile {
+        margin: 0 !important;
+    }
+}
+
+
+/* =========================
+PHONE
+=============================*/
+@media only screen and (max-width: 768px) {
+    .banner .banner__content {
+        max-width: 100%;
+    }
+
+    .banner {
+        padding: 130px 0;
+    }
+
+    .features-section .features-section__tab {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+
+    .features-section .features-section__tab:first-child {
+        padding-left: 0;
+    }
+
+    .features-section .features-section__tab:last-child {
+        padding-right: 0;
+    }
+
+    .faqs-section .faq-section__accordion-qst {
+        font-size: 16px;
     }
 }
