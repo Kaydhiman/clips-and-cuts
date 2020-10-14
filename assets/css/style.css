@@ -580,6 +580,14 @@ TAB
         margin: auto;
     }
 
+    .features-section .features-section__phone-top-text {
+        margin-bottom: 16px;
+    }
+
+    .features-section .features-section__phone-top-text {
+        font-size: 20px;
+    }
+
     .carousel-on-mobile {
         margin: 0 !important;
     }
